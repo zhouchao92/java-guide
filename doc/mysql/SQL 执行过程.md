@@ -1,0 +1,1 @@
+![MySQL语句执行过程](/pic/MySQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png)

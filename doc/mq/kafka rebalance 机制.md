@@ -1,5 +1,12 @@
 consumer group 消费者与 partition 重新匹配的过程
 
+前提：consumer没有指定partition消费
+
+三种策略：
+- range（partitions/consumers）
+- 轮询
+- sticky 保持原分区状态的基础上进行分配
+
 rebalance 时机：
 - consumer group 成员个数发生变化
 - consumer 消费超时
