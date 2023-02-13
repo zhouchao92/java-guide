@@ -1,0 +1,1 @@
+![Prometheus架构](/pic/Prometheus%E6%9E%B6%E6%9E%84.png)
