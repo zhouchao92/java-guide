@@ -5,20 +5,20 @@ new SpringApplication(primarySources).run(args);
 
 准备阶段：
 
-1.推断应用类型，SERVLET，根据 `String[] SERVLET_INDICATOR_CLASSES = { "javax.servlet.Servlet", "org.springframework.web.context.ConfigurableWebApplicationContext" };`
-2.（初始化器）加载 META-INF/spring.factories 下 `org.springframework.context.ApplicationContextInitializer`，以反射的形式创建实例
-3.（监听器）加载 META-INF/spring.factories 下 `org.springframework.context.ApplicationListener` ===》事件监听器，以反射的形式创建实例
-4.根据调用的栈推断主类类名
+1. 推断应用类型，SERVLET，根据 `String[] SERVLET_INDICATOR_CLASSES = { "javax.servlet.Servlet", "org.springframework.web.context.ConfigurableWebApplicationContext" };`
+2. （初始化器）加载 META-INF/spring.factories 下 `org.springframework.context.ApplicationContextInitializer`，以反射的形式创建实例
+3. （监听器）加载 META-INF/spring.factories 下 `org.springframework.context.ApplicationListener` ===》事件监听器，以反射的形式创建实例
+4. 根据调用的栈推断主类类名
 
 
 启动过程：
 
-1.获取并启动监听器
-2.构建应用上下文对象
-3.初始化应用上下文
-4.刷新上下文的准备阶段
-5.刷新应用上下文
-6.刷新应用上下文的扩展接口【方便后续拓展】
+1. 获取并启动监听器
+2. 构建应用上下文对象
+3. 初始化应用上下文
+4. 刷新上下文的准备阶段
+5. 刷新应用上下文
+6. 刷新应用上下文的扩展接口【方便后续拓展】
 
 
 ```java
