@@ -140,7 +140,9 @@ bean的生命周期、循环依赖问题、spring cloud（如项目中有用过�
 - Consumer的负载均衡是怎么样的？
 #### Redis（或其他缓存系统）
 redis工作模型、redis持久化、redis过期淘汰机制、redis分布式集群的常见形式、分布式锁、缓存击穿、缓存雪崩、缓存一致性问题
+
 推荐书籍：《Redis 设计与实现》
+
 推荐文章：
 [分布式Redis深度历险-复制](https://github.com/farmerjohngit/myblog/issues/1)
 [分布式Redis深度历险-Sentinel](https://github.com/farmerjohngit/myblog/issues/2)
@@ -159,6 +161,7 @@ redis工作模型、redis持久化、redis过期淘汰机制、redis分布式集
 - 如何用redis实现分布式锁？
 #### Mysql
 事务隔离级别、锁、索引的数据结构、聚簇索引和非聚簇索引、最左匹配原则、查询优化（explain等命令）
+
 推荐文章：[http://hedengcheng.com/?p=771](http://hedengcheng.com/?p=771)
 [https://tech.meituan.com/2014/06/30/mysql-index.html](https://tech.meituan.com/2014/06/30/mysql-index.html)
 [http://hbasefly.com/2017/08/19/mysql-transaction/](http://hbasefly.com/2017/08/19/mysql-transaction/)
@@ -179,6 +182,7 @@ zk大致原理（可以了解下原理相近的Raft算法）、zk实现分布式
 - 如何用zk实现分布式锁，与redis分布式锁有和优缺点
 #### HBase（如简历有写）
 HBase适用的场景、架构、merge和split、查写数据的流程。
+
 推荐文章：[http://hbasefly.com/2017/07/26/transaction-2/](http://hbasefly.com/2017/07/26/transaction-2/) 及该博客下相关文章
 #### Storm（如简历有写）
 Storm与Map Reduce、Spark、Flink的比较。Storm高可用、消息ack机制
