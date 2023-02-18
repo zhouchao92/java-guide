@@ -48,7 +48,7 @@
 例：
 - 库m1,m2 表course_1,course_2
 - 分片键 cid 
-- 分片算法，m$->{cid%2+1}.course_$->{((cid+1)%4).intdiv(2)+1}
+- 分片算法，`m$->{cid%2+1}.course_$->{((cid+1)%4).intdiv(2)+1}`
 
 <font color=red>不支持范围查询</font>
 
