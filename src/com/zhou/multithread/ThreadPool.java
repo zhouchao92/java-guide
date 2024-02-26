@@ -1,4 +1,4 @@
-package com.zhou;
+package com.zhou.multithread;
 
 import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;

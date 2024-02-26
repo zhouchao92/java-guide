@@ -1,4 +1,4 @@
-package com.zhou;
+package com.zhou.jvm;
 
 /**
  * RuntimeConstantPoolOOM
