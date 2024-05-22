@@ -1,4 +1,5 @@
 ## HW 与 LEO
+```plaintext
 ----------------------------
 |        LEO               | 待写入数据
 ----------------------------
@@ -11,7 +12,7 @@
 |                          |
 |     LogStartOffset       | 起始位置
 |--------------------------|
-
+```
 HW：Hig hWater Mark，LEO：Log End Offset
 
 
