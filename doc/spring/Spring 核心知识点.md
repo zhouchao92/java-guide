@@ -1,4 +1,5 @@
 #### BeanFactory和ApplicationContext的区别？
+
 相同点：
 
 1. 都是 Spring 的 IOC 容器，interface
@@ -16,7 +17,9 @@
 | 自动注入           | 调用 API 注册AutoWiredBeanPostProcessor                  | XML 配置                                                        |
 | 事件发布监听       | 不支持                                                   | 支持                                                            |
 
+
 #### Spring 的事务传播机制是什么？
+
 | **行为**     | **描述**                                                                                                       |
 |--------------|----------------------------------------------------------------------------------------------------------------|
 | REQUIRED     | 如果有事务在运行，当前的方法就在这个事务内运行，否则，就启动一个新的事务，并在自己的事务内运行                 |
@@ -27,10 +30,14 @@
 | NEVER        | 当前的方法不应该运行在事务中，如果有运行的事务，就抛出异常                                                     |
 | NESTED       | 如果有事务在运行，当前的方法就应该在这个事务的嵌套事务内运行，否则，就启动一个新的事务，并在它自己的事务内运行 |
 
+
 #### 单例 Bean 是线程安全的吗？
+
 不是，Spring 框架没有对 Bean 进行多线程的封装，如果需要可以使用原型模式的作用域 prototype
 
+
 #### Spring 中使用了哪些设计模式及场景？
+
 | 工厂模式                            | BeanFacotry 和 ApplicationContext 的创建中                                                                                 |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | 模板模式                            | BeanFacotry 和 ApplicationContext 的实现中                                                                                 |
@@ -42,10 +49,12 @@
 | 适配器模式                          | MethodBeforeAdviceAdapter，ThrowsAdviceAdapter，AfterReturningAdapter                                                      |
 | 装饰者模式                          | 源码中 Wrapper 和 Decorator 后缀的                                                                                         |
 
+
 #### Spring 事务的实现原理是什么？
 
 - 声明式事务：@Transactional 注解，给方法所在的类生成动态代理对象做为 bean，在业务执行出现异常时，回滚，否则提交事务
 - 编程式事务
+
 
 #### Spring 事务什么情况下会失效？
 
@@ -56,6 +65,8 @@
 - 数据库不支持事务
 - 异常被捕获
 - 异常类型错误或配置错误 RollbackForClass
+
+
 #### Bean对象的作用域有哪些？
 
 - singleton
@@ -63,6 +74,7 @@
 - request
 - session
 - global-session
+
 
 #### 简述 Bean 对象的生命周期
 
@@ -76,6 +88,7 @@
 8. 当 Bean 不再需要时，会经过清理阶段，如果 Bean 实现了 DisposableBean 接口，会调用其实现的 destroy 方法
 9. 如果这个 Bean 的 Spring 配置中配置了destroy-method 属性，会自动调用其配置的销毁方法
 
+
 #### 如何实现一个 IOC 容器？
 
 1. 准备基本的容器对象，包含一些 map 结构的集合，用于存储具体的对象
@@ -85,6 +98,7 @@
 5. 通过容器获取对象，对象获取与逻辑处理
 6. 提供对象的销毁，当对象不在使用时或容器关闭时，将无用的对象销毁
 
+
 #### 在配置文件中Bean的自动装配方式有哪些？
 
 - no 缺省，通过'ref' 属性手动设定
@@ -93,17 +107,20 @@
 - constructor 构造器参数的 byType
 - autodetect 自动检测，如果找到默认的构造函数，用构造，否则按照类型自动装配
 
+
 #### Spring 如何选择是用 JDK 还是 CGLIB ？
 
 1. 当 bean 实现接口时，会用 JDK 代理模式
 2. 当 bean 没有实现接口，用 CGLIB 实现
 3. 可以强制使用 CGLIB（在 Spring 配置中加入 `<aop:aspectj-autoproxy proxyt-target-class="true"/>`）
 
+
 #### Spring 怎么解决循环依赖？
+
 三级缓存
-_* 第一层缓存：singletonObjects 单例池，已初始化好的单例对象（代理对象）
-* 第二层缓存：earlySingletonObjects 提前产生的代理对象（未经过完整生命周期的普通对象/代理对象）
-* 第三层缓存：singletonFactories 打破循环，lambda表达式 aop创建代理对象，实际存储普通对象，以便于后面扩展有机会创建代理对象（_用于保存bean创建工厂_）_
+- 第一层缓存：singletonObjects 单例池，已初始化好的单例对象（代理对象）
+- 第二层缓存：earlySingletonObjects 提前产生的代理对象（未经过完整生命周期的普通对象/代理对象）
+- 第三层缓存：singletonFactories 打破循环，lambda表达式 aop创建代理对象，实际存储普通对象，以便于后面扩展有机会创建代理对象（_用于保存bean创建工厂_）
 
 ![Spring 三级缓存原理](/pic/Spring%20三级缓存原理.png)
 
@@ -111,5 +128,7 @@ _出现循环依赖现象==>提前AOP，属性注入，注入的代理对象  �
 
 三级缓存解决不了构造器中循环依赖问题，可以通过@Lazy注解解决（_先生成属性基于Lazy的代理对象，在后期调用或其他时机再真正从单例池中获取_）
 
+
 #### Spring Bean 创建策略
+
 ![Spring Bean 创建策略](/pic/Spring%20Bean%20创建策略.png)

@@ -1,4 +1,5 @@
 Spring Bean 的生命周期
+
 1. 解析类得到 BeanDefinition
 2. 推断构造方法
 3. 确定构造方法，反射的方式实例化对象
@@ -12,8 +13,9 @@ Spring Bean 的生命周期
 11. DisposableBean 的 destroy() 方法
 
 
-
+```plaintext
 构建 BeanDefinition   
+
 -> 推断构造函数  
 -> 实例化（先将普通对象相关信息 lambda 表达式放入三级缓存）  
 -> 属性注入 【存在循环依赖问题】  
@@ -25,3 +27,4 @@ Spring Bean 的生命周期
 --> 如果出现了循环依赖会执行 getBean()  
 -> use bean  
 -> 执行 DisposableBean 销毁 destroy()  
+```
