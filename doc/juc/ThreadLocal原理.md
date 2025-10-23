@@ -1,4 +1,5 @@
 #### ThreadLocal 的原理是什么？
+
 ```java
 public class Thread implements Runable {
   ThreadLocal.ThreadLocalMap threadLocals = null;
@@ -49,7 +50,10 @@ public class ThreadLocal<T> {
   }
 }
 ```
+
+
 #### ThreadLocal 的内存泄漏问题？
+
 ThreadLocalMap 的 key 是线程属于弱引用，当线程被回收时，key 会被回收，但是 value 属于强引用不会被回收，容易出现内存泄漏问题
 ![ThreadLocal 原理](/pic/ThreadLocal%20内存泄漏.jpeg)
 
