@@ -1,19 +1,24 @@
 # 概述
+
 - 面试八股文
 - 阅读笔记（[深入理解 Java 虚拟机：JVM 高级特性与最佳实践（第3版）周志明](/doc/深入Java虚拟机.md)）
 - 笔记源码
 
 ## Java核心知识
+
 ### 基础
-- [java 基本语法](/doc/java/基本语法.md)
+
+- [Java 基本语法](/doc/java/基本语法.md)
 - [集合](/doc/java/集合.md) 
 	- [HashMap](/doc/java/HashMap.md)
 	- [ConcurrentHashMap](/doc/java/ConcurrentHashMap.md)
-- [io 模型](/doc/java/io模型.md)
+- [IO模型](/doc/java/IO模型.md)
 - [Netty](/doc/java/Netty.md)
-- [jdk8 新特性](/doc/java/jdk8%20新特性.md)
+- [JDK 新特性](/doc/java/JDK新特性.md)
 
 ### juc
+
+- [死锁](/doc/juc/死锁.md)
 - [进程与线程](/doc/juc/进程与线程.md)
 - [线程的生命周期](/doc/juc/线程的生命周期.md)
 - [线程池](/doc/juc/线程池.md)
@@ -23,7 +28,8 @@
 - [Volatile原理](/doc/juc/Volatile原理.md)
 - [ThreadLocal原理](/doc/juc/ThreadLocal原理.md)
 
-### jvm
+### JVM
+
 - [内存模型](/doc/jvm/内存模型.md)
 - [类加载](/doc/jvm/类加载.md)
 - [双亲委派机制](/doc/jvm/双亲委派机制.md)
@@ -33,7 +39,9 @@
 - [垃圾回收器](/doc/jvm/垃圾回收器.md)
 
 ## 数据库
+
 ### MySQL
+
 - [SQL执行过程](/doc/mysql/SQL%20执行过程.md)
 - [锁的划分](/doc/mysql/锁的划分.md)
 - [索引](/doc/mysql/索引.md)
@@ -45,6 +53,7 @@
 - [单表优化](/doc/mysql/单表优化.md)
 
 ### Redis
+
 - [布隆过滤器](/doc/redis/布隆过滤器.md)
 - [Redis核心知识](/doc/redis/Redis%20核心知识.md)
 - [9大数据结构](/doc/redis/9大数据结构.md)
@@ -56,11 +65,14 @@
 - [高可用方案](/doc/redis/高可用方案.md)
 
 ### ElasticSearch
+
 - [ElasticSearch 核心知识](/doc/elasticsearch/Elasticsearch%20核心知识.md)
 - [倒排索引](/doc/elasticsearch/倒排索引.md)
 
 ## 框架
+
 ### Spring
+
 - [Spring 核心知识点](/doc/spring/Spring%20核心知识点.md)
 - [Spring 容器启动过程](/doc/spring/Spring%20容器启动过程.md)
 - [Spring 循环依赖](/doc/spring/Spring%20循环依赖.md)
@@ -69,24 +81,30 @@
 - [BeanFactory 和 FactoryBean 的区别](/doc/spring/BeanFactory%20和%20FactoryBean%20的区别.md)
 
 ### Spring MVC
+
 - [Spring MVC核心知识点](/doc/spring%20mvc/Spring%20MVC%20核心知识点.md)
 
 ### Spring Boot
+
 - [Spring Boot 的启动过程](/doc/spring%20boot/Spring%20Boot%20的启动过程.md)
 - [Spring Boot 的自动装配原理](/doc/spring%20boot/Spring%20Boot%20的自动装配原理.md)
 
 ### Spring Cloud
+
 - [nacos](/doc/spring%20cloud/nacos.md)
 - [Ribbon 懒加载](/doc/spring%20cloud/Ribbon懒加载.md)
 - [SpringSessison核心原理(装饰者模式)](/doc/spring%20cloud/SpringSessison核心原理(装饰者模式).md)
 
 ### MyBatis
+
 - [查询实现分页](/doc/mybatis/查询实现分页.md)
 - [缓存技术](/doc/mybatis/缓存技术.md)
 - [源码分析](/doc/mybatis/源码分析.md)
 
 ## 消息队列
+
 ### kafka
+
 - [ZAB协议](doc/kafka/ZAB协议.md) 
 - [kafka 核心知识](/doc/kafka/Kafka%20核心知识.md)
 - [kafka 基础概念](/doc/kafka/kafka%20基础概念.md)
@@ -99,12 +117,15 @@
 - [kafka rebanlance 机制](/doc/kafka/kafka%20rebalance%20机制.md)
 
 ### rocketmq
+
 - [rocketmq 核心知识](/doc/rocketmq/RocketMQ%20核心知识.md)
 
 ### rabbitmq
+
 - [rabbitmq 核心知识](/doc/rabbitmq/RabbitMQ%20核心知识.md)
 
 ## 其他
+
 - [RPC](/doc/other/什么是%20rpc.md)
 - [微服务熔断降级](/doc/other/微服务熔断降级.md)
 - [接口幂等性](/doc/other/接口幂等性.md) 

@@ -1,4 +1,5 @@
-#### JVM的对象头组成 Markword（32位）？
+### JVM的对象头组成 Markword（32位）？
+
 ![对象头 Markword（32位）](/pic/对象头%20Mark%20Word（32位）.png)
 
 1. 无锁状态下，当显示或隐式调用 Object.hashcode() 方法时才会在对象头中生成 hashcode

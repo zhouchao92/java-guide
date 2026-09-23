@@ -1,12 +1,14 @@
 #### HashMap 底层原理是什么？
-动态数组 + 链表 / 红黑树（jdk1.8）
-默认初始化大小为 16（2的 n 次幂，提高散列程度，降低 hash 碰撞），负载因子为 0.75（泊松分布）
-极值条件：
 
-1. 在数组长度大于等于 64，链表长度大于 8 时升级为红黑树
+- 动态数组 + 链表 / 红黑树（jdk1.8）
+- 默认初始化大小为 16（2的 n 次幂，提高散列程度，降低 hash 碰撞），负载因子为 0.75（泊松分布）
+
+插入/移除-极值条件：
+1. 在数组长度大于等于 64，链表长度大于等于 8 时升级为红黑树
 2. 在链表长度小于等于 6 时由红黑树退化为链表
 
 #### JDK1.8中对hash算法和寻址算法是如何优化的？
+
 ```java
 // JDK1.8 
 static final int hash(Object key) {     
@@ -29,12 +31,17 @@ hash算法优化：高低16位都参与运算，让低16位同时保持高低16�
 - 高16位的运算可以忽略，核心在于低16位的与运算。
 
 #### HashMap如何解决hash碰撞问题？
+
 hash 冲突问题，链表+红黑树，O(n) 和 O(logn)
+
 get(key)，如果定位到数组的某个位置是一个链表，遍历链表，找到指定的 key-value对。假设链表很长，可能会导致遍历链表的性能很差，O(n)。
+
 优化：如果链表的长度达到了一定的长度之后，会将链表转换为红黑树，遍历一棵红黑树找一个元素，O(logn)，性能会比链表高。
 
 #### HashMap是如何进行扩容的？
+
 2 倍扩容，rehash() 重新计算索引
+
 假设数组长度为16
 
 | **操作** | **值**                                                     |
@@ -58,6 +65,7 @@ get(key)，如果定位到数组的某个位置是一个链表，遍历链表，
 判断二进制结果中是否多出一个 bit 的 1，如果没多，就是原来的 index，如果多了出来，就是 index+oldCap，通过这种方式，就避免了 rehash 的时候，用每个 hash 对新数组的长度取模，取模性能不高，位运算的性能比较高。
 
 #### put方法分析
+
 ```java
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 			   boolean evict) {
@@ -112,6 +120,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 ```
 
 #### 红黑树
+
 ```java
 final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
 							   int h, K k, V v) {

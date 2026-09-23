@@ -1,10 +1,10 @@
-## ReentrentLock 是怎么实现公平锁和非公平锁？
+### ReentrentLock 是怎么实现公平锁和非公平锁？
 
-在加锁阶段，公平锁会判断是否存在线程在排队，如果当前有线程在排队，则加入队列，非公平锁直接竞争锁
-在释放锁时，都是唤醒队列最前面的线程
+- 在加锁阶段，公平锁会判断是否存在线程在排队，如果当前有线程在排队，则加入队列，非公平锁直接竞争锁
+- 在释放锁时，都是唤醒队列最前面的线程
 
 
-## 非公平锁-->加锁  
+### 非公平锁-->加锁  
 
 不会判断是否需要排队
 ```java
@@ -47,7 +47,7 @@ final boolean nonfairTryAcquire(int acquires) {
 ```
 
 
-## 公平锁-->加锁
+### 公平锁-->加锁
 
 ```java
 static final class FairSync extends Sync {
@@ -95,7 +95,7 @@ public final boolean hasQueuedPredecessors() {
 ```
 
 
-## 解锁
+### 解锁
 
 ```java
 /**
