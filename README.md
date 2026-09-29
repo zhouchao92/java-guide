@@ -45,6 +45,7 @@
 - [SQL执行过程](/doc/mysql/SQL%20执行过程.md)
 - [锁的划分](/doc/mysql/锁的划分.md)
 - [索引](/doc/mysql/索引.md)
+- [为什么选择B+树](/doc/mysql/为什么选择B%2B树.md)
 - [事务](/doc/mysql/事务.md)
 - [MVCC原理](/doc/mysql/MVCC原理.md)
 - [innodb是如何实现事务的](/doc/mysql/innodb是如何实现事务的.md)
