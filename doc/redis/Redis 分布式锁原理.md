@@ -1,6 +1,6 @@
 ![image.png](https://cdn.nlark.com/yuque/0/2022/png/25811993/1647073556591-ead256ea-79c5-4259-8789-107a7787b93f.png#averageHue=%230f0d0d&clientId=ue8d1958d-9450-4&from=paste&id=u15cbf16d&originHeight=3034&originWidth=1358&originalType=url&ratio=1&rotation=0&showTitle=false&size=300924&status=done&style=none&taskId=u7a92afa5-bd64-482a-a868-31d8567a742&title=)
 
-1. set nx ex 进行加锁，并设定自动解锁时间（自动解锁时间一定要大于业务的执行时间），key + value （一般为 uuid，保证客户端的唯一性，在解锁时需要验证）
+1. set nx px 进行加锁，并设定自动解锁时间（自动解锁时间一定要大于业务的执行时间），key + value （一般为 uuid，保证客户端的唯一性，在解锁时需要验证）
 2. 看门狗 watch dog 来进行自动延时加锁（锁的自动续期）
 3. lua 脚本原子性操作解锁，并校验解锁对象
 ```lua

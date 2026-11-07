@@ -9,6 +9,7 @@
 ### 基础
 
 - [Java 基本语法](/doc/java/基本语法.md)
+- [动态代理](/doc/java/动态代理.md)
 - [集合](/doc/java/集合.md) 
 	- [HashMap](/doc/java/HashMap.md)
 	- [ConcurrentHashMap](/doc/java/ConcurrentHashMap.md)
