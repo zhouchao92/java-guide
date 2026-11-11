@@ -116,6 +116,13 @@ Agent 与工具链的前提是模型输出**可被程序解析**：
 - **《Attention Is All You Need》**（论文）——有精力读前 6 节即可，重点是 Multi-Head 与位置编码。
 - **Anthropic 提示词库**——https://github.com/anthropics/prompt-engineering-classes/ 下的 materials，大量真实案例。
 
+### 国内资源（中文友好）
+
+- **Datawhale《面向开发者的 LLM 入门课程》**——https://datawhalechina.github.io/llm-cookbook/ （吴恩达提示词课程的中文复现，含中文字幕视频，阶段一中文首选）；
+- **B站"跟李沐学AI"论文精读**——《Attention Is All You Need》逐段中文讲解，与 3Blue1Brown 视频互补；
+- **李宏毅《生成式 AI》课程**（B站）——LLM 原理的中文系统课；
+- **国内 API Playground**——阿里云百炼 / DeepSeek 开放平台 / 智谱开放平台 / 火山引擎方舟，直连调 temperature/top_p，替代 OpenAI/Anthropic Playground。
+
 ### 动手实践渠道
 
 - **Spring AI 官方文档 Quickstart**——https://docs.spring.io/spring-ai/reference/ （本栈主线，第 1 周就跑通 `ChatClient` 调用）。

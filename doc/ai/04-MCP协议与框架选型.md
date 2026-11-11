@@ -146,6 +146,13 @@ Java 主线之外，理解行业事实标准的编排范式：
 - **论文《A Survey on the Optimization of Large Language Model-based Agents》/ Agent 编排综述**——了解 planner/executor 模式谱系。
 - **Anthropic 文章《Introducing the Model Context Protocol》**——MCP 设计动机的原始阐述。
 
+### 国内资源（中文友好）
+
+- **Spring AI Alibaba**——https://java2ai.com/ （阿里出品，中文文档，含 MCP/Graph 支持，与 Spring AI 官方文档互补）；
+- **国内 MCP 广场**——阿里云百炼 MCP 广场、魔搭 ModelScope 的 MCP 模块，接入现成国内 Server（地图、办公类）练手 Client；
+- **MCP 中文社区翻译**——检索 "MCP 中文文档"，只作辅助，规范以 modelcontextprotocol.io 英文原文为准；
+- **LangChain4j**——Java 生态另一主流框架，做框架选型对照时参考。
+
 ### 动手实践（第 5–6 周产出）
 
 1. **第 5 周**：跑通 MCP Inspector + 一个官方示例 Server；用 Spring AI `@Tool` 重写 02 册的 AgentLoop 工具层；读 LangGraph 概念文档并画出"条件边 + checkpoint"的状态机图。

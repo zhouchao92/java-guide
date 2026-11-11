@@ -123,6 +123,13 @@
 - **论文《GraphRAG: From Local to Global》（2024, Microsoft）**——了解 Graph RAG 动机与"全局问题"场景。
 - **中文向**：检索 "C-MTEB 中文 Embedding 选型"、"bge/bge-m3 模型卡"（HuggingFace）了解中文场景主流选择。
 
+### 国内资源（中文友好）
+
+- **Datawhale《动手学大模型应用开发》**——https://datawhalechina.github.io/llm-universe/ ，知识库搭建 → RAG → 评估的完整中文教程；
+- **Milvus 中文文档**——https://milvus.io/zh-cn （Zilliz 中国团队出品，向量库中文参考最全）；
+- **智源 bge/bge-m3 官方仓库**（GitHub: FlagOpen/FlagEmbedding，中文 README）——中文 Embedding 第一手资料，模型可在魔搭 ModelScope 或 HF-Mirror（hf-mirror.com）下载；
+- **RAGFlow / FastGPT / Dify**（国产开源 RAG 平台）——读源码，对照自己的分块、混合检索与评估实现。
+
 ### 动手实践（本周产出）
 
 1. 用 **Spring AI 的 RAG 支持**（`VectorStore` 抽象 + pgvector 或 Redis）搭一条最小管道：解析 10 篇 Markdown → 分块入库 → 相似度检索 → 带引用回答；

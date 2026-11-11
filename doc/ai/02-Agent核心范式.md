@@ -166,6 +166,12 @@ ToolRegistry tools = new ToolRegistry()
 - **《Generative Agents》（斯坦福小镇）**——Park et al.，理解记忆流（memory stream）设计，对应长期记忆。
 - **Andrej Karpathy 关于 Agent 上下文管理的分享**——搜索 "Karpathy LLM context engineering"（含其 X/博客短文），理解 compaction 直觉。
 
+### 国内资源（中文友好）
+
+- **Spring AI Alibaba**（阿里）——https://java2ai.com/ ，Java 生态的国内 Agent 框架（ReactAgent/多智能体/Graph 编排），中文文档，可与 Spring AI 主线对照；
+- **书生大模型实战营**（github.com/InternLM/Tutorial）——Lagent 智能体关卡，中文文档 + B站视频；
+- **机器之心 / InfoQ 中文站**——检索 "Agent 架构"、"多智能体 生产实践"，看国内团队的落地案例。
+
 ### 动手实践（本周产出）
 
 1. **用纯 Java 完成第二节的 AgentLoop**（可用任意模型 API，不引框架），跑通三类自测用例；
